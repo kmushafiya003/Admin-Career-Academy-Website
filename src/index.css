@@ -1,13 +1,29 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+.anime {
+    border : none ;
+    position : relative;
+  }
+  .anime:hover{
+    border:none;
+  }
+  
+  .anime::after{
+    content: " ";
+    position: absolute ;
+    width: 0px;
+    height: 3px;
+    left: 50%;
+    bottom : -5px;
+    background-color:#059669;
+    transition: all ease-out .3s;
+  }
+  
+  .anime:hover::after{
+    width:100%;
+    left:0%;
+  
+  }
+  
